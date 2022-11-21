@@ -12,15 +12,26 @@ const initialVal={
   emp:'false',
   income:0,
 }
+export function speak (message) {
+  var msg = new SpeechSynthesisUtterance(message)
+  var voices = window.speechSynthesis.getVoices()
+  msg.voice = voices[0]
+  window.speechSynthesis.speak(msg)
+}
+speak('Hello, world')
+
+
+
 const App=()=>{
   const [values,setValues]= useState(initialVal)
+  
   return (   
     <form>
       <div className='main'>
         <div className='left'>  
           <Typography  variant='h4' >General Details</Typography>
           <br></br>
-          <Textbox id="name" value={values.name} name="Fullname"></Textbox>
+          <Textbox id="name" name="Fullname"></Textbox>
           <br></br>
           <Bradio id="gender" name='Gender' value={values.gender}></Bradio>
           <br></br>
