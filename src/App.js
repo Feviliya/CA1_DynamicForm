@@ -31,7 +31,7 @@ const App=()=>{
         <div className='left'>  
           <Typography  variant='h4' >General Details</Typography>
           <br></br>
-          <Textbox id="name" name="Fullname"></Textbox>
+          <Textbox id="name" name="Fullname" value={values.name}></Textbox>
           <br></br>
           <Bradio id="gender" name='Gender' value={values.gender}></Bradio>
           <br></br>
