@@ -12,13 +12,13 @@ const initialVal={
   emp:'false',
   income:0,
 }
-export function speak (message) {
-  var msg = new SpeechSynthesisUtterance(message)
-  var voices = window.speechSynthesis.getVoices()
-  msg.voice = voices[0]
-  window.speechSynthesis.speak(msg)
-}
-speak('Hello, world')
+// export function speak (message) {
+//   var msg = new SpeechSynthesisUtterance(message)
+//   var voices = window.speechSynthesis.getVoices()
+//   msg.voice = voices[0]
+//   window.speechSynthesis.speak(msg)
+// }
+// speak('Hello, world')
 
 
 
